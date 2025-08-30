@@ -7,11 +7,19 @@ This project helps patients take medicines on time by dispensing pills automatic
 
 ## 🚀 Features  
 - ⏰ **Time-based scheduling** with NTP synchronization  
-- 📱 **Web dashboard** to add, view, and delete medicine schedules  
-- 💾 **Persistent storage** using LittleFS (schedules survive reboot)  
-- 🖥️ **OLED display** showing current medicines and timings  
-- ⚙️ **Three servo-controlled dispensers** for different medicines  
+- 📱 **Web dashboard** to add, view, and delete medicine schedules    
+- 🖥️ **OLED display** showing current medicines and timings    
 - 🔄 **Multiple quantity dispensing** with automatic pauses between pills  
+
+---
+## ⚙️ How It Works  
+
+1. **WiFi & Time Sync** – The ESP32 connects to WiFi and synchronizes the current time using NTP.  
+2. **User Scheduling** – You open the web dashboard and add medicines with name, time, dispenser slot, and quantity.  
+3. **Storage** – The schedules are saved in the ESP32’s LittleFS filesystem, so they remain even after a restart.  
+4. **Display** – The OLED screen shows the current schedules for all 3 dispensers.  
+5. **Automatic Dispensing** – At the scheduled time, the ESP32 activates the corresponding servo to release the set number of pills.  
+6. **Feedback** – The device logs activity over Serial, updates the OLED, and refreshes the web UI with the new schedule.  
 
 ---
 ## 🧰 Tech Stack  

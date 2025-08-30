@@ -14,6 +14,28 @@ This project helps patients take medicines on time by dispensing pills automatic
 - 🔄 **Multiple quantity dispensing** with automatic pauses between pills  
 
 ---
+## 🧰 Tech Stack  
+
+### 🔌 Hardware  
+- **ESP32 Development Board**  
+- **3x Servo Motors** (pill dispensers)  
+- **SSD1306 OLED Display (I2C)**  
+- **Medicine containers + mechanical mounts**  
+- **WiFi network**  
+
+### 💻 Software  
+- **Arduino IDE / PlatformIO**  
+- **ESP32 Arduino Core**  
+- **Libraries:**  
+  - WiFi.h  
+  - WebServer.h  
+  - LittleFS.h  
+  - ArduinoJson.h  
+  - Adafruit GFX  
+  - Adafruit SSD1306  
+  - ESP32Servo  
+
+---
 
 ## 🙌 Team & Credits
 Built with ❤️ by
